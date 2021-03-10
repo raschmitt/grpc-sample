@@ -4,6 +4,6 @@ gRPC server and client implementations with .Net
 
 # Under development...
 
-- `docker-compose` is broken 
-- use [`BloomRPC`](https://github.com/uw-labs/bloomrpc) to play around with the api
+- go to grpc-sample and run with `docker-compose up`
+- use [`BloomRPC`](https://github.com/uw-labs/bloomrpc) to play around with the gRPC api
 - [Introduction to gRPC on .NET](https://docs.microsoft.com/en-us/aspnet/core/grpc/?view=aspnetcore-5.0)
