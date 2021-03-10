@@ -15,7 +15,7 @@ namespace Client
                 ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
             };
 
-            var channel = GrpcChannel.ForAddress("https://grpc-service",
+            var channel = GrpcChannel.ForAddress("http://grpc-service",
                 new GrpcChannelOptions { HttpHandler = httpHandler });
             var client = new Greeter.GreeterClient(channel);
             
@@ -24,11 +24,9 @@ namespace Client
                 Name = "GreeterClient"
             };
             
-            var reply = await client.SayHelloAsync(helloRequest);
+            var response = await client.SayHelloAsync(helloRequest);
             
-            Console.WriteLine("Greeting: " + reply.Message);
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
+            Console.WriteLine("Greeting: " + response.Message);
         }
     }
 }
